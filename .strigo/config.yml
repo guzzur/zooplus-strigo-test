@@ -12,7 +12,7 @@ x-user-data: &user-data-script |
       chmod +x kubectl
       sudo mv kubectl /usr/local/bin/
   fi
-  
+
   # 2. Install Helm
   curl -fsSL https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 | bash
   
@@ -64,7 +64,7 @@ x-user-data: &user-data-script |
       sudo ln -sf "$HOME/.krew/bin/kubectl-krew" /usr/local/bin/kubectl-krew
   fi
   
-  # Test installation
+  # Test Installation
   export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
   export KREW_ROOT="$HOME/.krew"
   
