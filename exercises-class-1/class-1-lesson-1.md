@@ -22,6 +22,6 @@ echo "Hello from Class 1!"
 
 ---
 
-**Duration:** 10 minutes  
+**Duration:** 15 minutes  
 **Difficulty:** Beginner
 
