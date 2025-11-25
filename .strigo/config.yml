@@ -140,9 +140,7 @@ classes:
       - file: "../exercises-class-1/class-1-lesson-1.md"
         title: "Class 1: Lesson 1"
         syntax: "md"
-      - file: "../exercises-class-1/class-1-lesson-2.md"
-        title: "Class 1: Lesson 2"
-        syntax: "md"
+
 
   # Class 2 - Test: Github integration-2
   - class_id: "6926141e84da085468ffebe2"
@@ -162,7 +160,4 @@ classes:
     exercises:
       - file: "../exercises-class-2/class-2-lesson-1.md"
         title: "Class 2: Lesson 1"
-        syntax: "md"
-      - file: "../exercises-class-2/class-2-lesson-2.md"
-        title: "Class 2: Lesson 2"
         syntax: "md"
