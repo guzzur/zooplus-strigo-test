@@ -17,13 +17,8 @@ classes:
           custom_username: "ubuntu"
           user_data: "scripts/user-data.sh"
     exercises:
-      - file: "exercises/introduction.md"
-        title: "Introduction Exercise"
+      - file: "exercises/lesson-1.md"
+        title: "Lesson 1: Hello World"
         syntax: "md"
-        exercise_type: "exercise"
-        duration: 15
-      - file: "exercises/hands-on-practice.md"
-        title: "Hands-on Practice"
-        syntax: "md"
-        exercise_type: "exercise"
-        duration: 30
+        exercise_type: "lesson"
+        duration: 5
