@@ -135,4 +135,3 @@ classes:
       - file: "../exercises/lesson-1.md"
         title: "Lesson 1: Hello World"
         syntax: "md"
-        exercise_type: "lesson"
