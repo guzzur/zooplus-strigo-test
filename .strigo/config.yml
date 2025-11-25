@@ -1,41 +1,29 @@
-# Strigo Git Integration Configuration
-# This file defines lab configurations and exercises that will be fetched by Strigo
+## Strigo Git Integration Configuration
+## This file defines lab configurations and exercises that will be fetched by Strigo
 
-# Lab Configurations
-# Define your lab configurations here
-labs:
-  - name: default-lab
-    display_name: Default Lab Configuration
-    platform: aws  # Options: aws, azure, gcp, docker, kubernetes
-    machine_size:
-      cpu: 2
-      ram: 4  # in GB
-    image: ami-003c60acc3656b8db  # AWS AMI ID or image reference
-    user_data: scripts/user-data.sh  # User data script that runs on instance launch
-    scripts:
-      # Path to setup scripts (optional)
-      setup: scripts/setup.sh
-      teardown: scripts/teardown.sh
-    interfaces:
-      # Define lab interfaces (SSH, RDP, Web, etc.)
-      - type: ssh
-        port: 22
-      - type: web
-        port: 8080
-        url: http://localhost:8080
-
-# Exercises
-# Define exercises that reference Markdown files
-exercises:
-  - name: introduction
-    display_name: Introduction Exercise
-    file: exercises/introduction.md
-    duration: 15  # minutes (optional)
-    lab_config: default-lab  # Reference to lab configuration above
-  
-  - name: hands-on-practice
-    display_name: Hands-on Practice
-    file: exercises/hands-on-practice.md
-    duration: 30
-    lab_config: default-lab
-
+---
+classes:
+  - lab_resources:
+      - display_name: "Default Lab Configuration"
+        platform_type: "lab"
+        image_platform: "linux"
+        view_interface: "desktop"
+        cloud_provider: "aws"
+        aws_vm_definition:
+          machine_size: "t3.medium"  # AWS instance type (2 vCPU, 4GB RAM)
+          ami_region_mapping:
+            us-east-1:
+              image_id: "ami-003c60acc3656b8db"
+          custom_username: "ubuntu"
+          user_data: "scripts/user-data.sh"
+    exercises:
+      - file: "exercises/introduction.md"
+        title: "Introduction Exercise"
+        syntax: "md"
+        exercise_type: "exercise"
+        duration: 15
+      - file: "exercises/hands-on-practice.md"
+        title: "Hands-on Practice"
+        syntax: "md"
+        exercise_type: "exercise"
+        duration: 30
