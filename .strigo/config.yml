@@ -1,16 +1,20 @@
 ---
 classes:
   - lab_resources:
-      - display_name: "AWS EC2 Instance"
+      - display_name: "Default Lab Configuration"
         platform_type: "lab"
         image_platform: "linux"
         view_interface: "desktop"
         cloud_provider: "aws"
         aws_vm_definition:
-          machine_size: "t2.micro"
+          machine_size: "t3.medium"
           ami_region_mapping:
-            eu-west-1:
-              image_id: "ami-0b32f4a77e48fcb24"
+            eu-central-1:
+              image_id: "ami-003c60acc3656b8db"
+          custom_username: "ubuntu"
+        user_data: "../scripts/user-data.sh"
     exercises:
-      - file: "../hello-world/hello.md"
-        title: "Hello!"
+      - file: "../exercises/lesson-1.md"
+        title: "Lesson 1: Hello World"
+        syntax: "md"
+        exercise_type: "lesson"
