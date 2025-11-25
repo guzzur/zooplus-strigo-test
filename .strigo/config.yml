@@ -12,7 +12,7 @@ classes:
         aws_vm_definition:
           machine_size: "t3.medium"  # AWS instance type (2 vCPU, 4GB RAM)
           ami_region_mapping:
-            us-east-1:
+            eu-central-1:
               image_id: "ami-003c60acc3656b8db"
           custom_username: "ubuntu"
           user_data: "scripts/user-data.sh"
