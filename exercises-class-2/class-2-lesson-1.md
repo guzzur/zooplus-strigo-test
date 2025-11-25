@@ -20,8 +20,3 @@ echo "Hello from Class 2!"
 - Resource management
 - Process management
 
----
-
-**Duration:** 10 minutes  
-**Difficulty:** Beginner
-

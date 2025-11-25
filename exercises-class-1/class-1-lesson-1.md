@@ -19,9 +19,3 @@ echo "Hello from Class 1!"
 - Basic terminal commands
 - File system navigation
 - System information
-
----
-
-**Duration:** 15 minutes  
-**Difficulty:** Beginner
-
