@@ -4,9 +4,7 @@ Mirrord Local Development Setup
 
 ## Local Setup
 
-Please refer to the official installation guide for detailed instructions for your local workstation:
-
-https://metalbear.com/mirrord/docs/overview/quick-start#cli-tool
+Please refer to the [official installation](https://metalbear.com/mirrord/docs/overview/quick-start#cli-tool) guide for detailed instructions for your local workstation:
 
 ---
 
