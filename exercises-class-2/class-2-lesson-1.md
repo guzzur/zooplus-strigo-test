@@ -11,5 +11,5 @@ This lesson covers different topics than Class 1.
 Run the following command:
 
 ```bash
-echo "Hello from Class 2!"
+echo "Hello from Class 2! auto fetch"
 ```
