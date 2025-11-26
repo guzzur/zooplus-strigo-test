@@ -11,5 +11,5 @@ This lesson will introduce you to the basics.
 Run the following command:
 
 ```bash
-echo "Hello from Class 1!"
+echo "Hello from Class 1! auto fetch"
 ```
