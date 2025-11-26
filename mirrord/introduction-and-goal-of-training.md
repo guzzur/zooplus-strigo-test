@@ -17,7 +17,7 @@ By the end of this training, you will be able to:
 
 ## What is mirrord?
 
-mirrord is an open-source tool (by MetalBear) that acts as a bridge between your local environment and your remote Kubernetes cluster.
+mirrord is an open-source tool by [MetalBear](https://metalbear.com/) that acts as a bridge between your local environment and your remote Kubernetes cluster.
 
 It enables you to:
 

@@ -1,62 +1,24 @@
 # Next Steps
 
-In this lesson you will steal traffic from the remote `httpbin` service to a local HTTP server using mirrord.
+## After the Lab – Try mirrord Locally
+
+Once you’ve completed the lab environment, you can continue experimenting with **mirrord** directly on your local machine.  
+Getting started is simple — you only need the **mirrord CLI** or an **IDE plugin** (for example, for VS Code or IntelliJ).  
+The **mirrord operator** is already managed and maintained by the **COP team**, so no additional setup in the cluster is required.
 
 ---
 
-## 1. Create `mirrord.json`
+**Getting Started Guide**
 
-```bash
-cat <<EOF2 >> mirrord.json
-{
-  "feature": {
-    "network": {
-      "incoming": {
-        "mode": "steal",
-        "port_mapping": [[8080, 80]]
-      },
-      "outgoing": true
-    },
-    "fs": "read",
-    "env": true
-  }
-}
-EOF2
-```
+- [Using mirrord for local development](https://wiki.web.zooplus.de/spaces/DEOS/pages/512245067/Using+mirrord+for+local+development)
 
-## 2. Run local Python HTTP server with mirrord
+**Advanced Guides**
 
-```bash
-mirrord exec -f mirrord.json \
-  --target deployment/${ZOOPLUS_USER_NAME}-zp-app-httpbin \
-  -n product-zoodemy-k8s-training-6 \
-  python3 -- -m http.server 8080
-```
-
-Wait until the server reports it has started.
-
-## 3. Call the remote service
-
-In another terminal tab:
-
-```bash
-curl https://httpbin-${ZOOPLUS_USER_NAME}.zdemyk8sd.int.aws.zooplus.io/
-```
-
-Instead of the normal httpbin UI you should see a **directory listing** from your local Python server.
-
-![mirrord traffic stealing](mirrod.png)
+- [Mirrord setup for Shop-Checkout local development](https://wiki.web.zooplus.de/spaces/DEOS/pages/411125679/Mirrord+Setup+for+Shop-Checkout+Local+Development)
+- [Using mirrord with Checkout-Frontend and Shop-Checkout applications](https://wiki.web.zooplus.de/spaces/DEOS/pages/312377789/Using+mirrord+with+Checkout-Frontend+and+Shop-Checkout+Applications)
 
 ---
 
-## 4. Cleanup
+**Need Help?**
 
-```bash
-helm delete ${ZOOPLUS_USER_NAME}-zp-app -n product-zoodemy-k8s-training-6
-```
-
----
-
-## 5. Next steps
-
-After the lab you can continue with mirrord on your own machine using your internal wiki guides and the **#mirrord-support** Slack channel.
+Join the `#mirrord-support` Slack channel for assistance, troubleshooting, or sharing your experiences.
