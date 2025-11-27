@@ -22,27 +22,27 @@ curl -fsSL https://raw.githubusercontent.com/metalbear-co/mirrord/main/scripts/i
 
 Generate `values.yaml` with the minimal required settings:
 
-   ```yaml
-   ---
-   classes:
-     - lab_resources:
-         - display_name: "AWS EC2 Instance"
-           platform_type: "lab"
-           image_platform: "linux"
-           view_interface: "desktop"
-           cloud_provider: "aws"
-           aws_vm_definition:
-             machine_size: "t2.micro"
-             ami_region_mapping:
-               eu-west-1:
-                 image_id: "ami-0b32f4a77e48fcb24"
-       exercises:
-         - file: "../hello-world/hello.md"
-           title: "Hello!"
-         - file: "../hello-world/world.md"
-           title: "World!"
-   ```
-
+```bash
+cat <<EOF >> values.yaml
+app: httpbin
+appVersion: 0.0.1
+stage: dev
+image:
+  repository: bin.private.zooplus.net/simonkowallik/httpbin@sha256
+  tag: f176fb37b6a0a242153d3ee08163d1596f640384643dcc5ab82791895896fb9d
+resources:
+  limits:
+    cpu: 100m
+    memory: 128Mi
+  requests:
+    cpu: 100m
+    memory: 128Mi
+routeTable:
+  enabled: true
+  hosts:
+  - httpbin-${ZOOPLUS_USER_NAME}.zdemyk8sd.int.aws.zooplus.io
+EOF
+```
 
 ### 2. Deploy
 
@@ -151,7 +151,7 @@ With mirrord you don’t need to do all that. You can run your application local
 
 ### Create `mirrord.json`
 
-```bash
+```shell
 cat <<EOF >> mirrord.json
 {
   "feature": {
