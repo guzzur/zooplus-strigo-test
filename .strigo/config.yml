@@ -122,7 +122,7 @@ x-user-data: &user-data-script |
 
 classes:
   # Class 1 - Test: Github integration
-  - class_id: "692493e7068eb74399df7a41"
+  - class_id: "692858d66d70417f2feee164"
     lab_resources:
       - display_name: "Class 1 Lab Configuration"
         platform_type: "lab"
