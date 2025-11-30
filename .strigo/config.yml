@@ -147,7 +147,7 @@ classes:
         title: "Next Steps"
         syntax: "md"
       - file: "../mirrord/next-steps.md"
-        title: "Next Steps II"
+        title: "Next Steps 2"
         syntax: "md"
 
 
