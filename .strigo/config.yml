@@ -146,6 +146,9 @@ classes:
       - file: "../mirrord/next-steps.md"
         title: "Next Steps"
         syntax: "md"
+      - file: "../mirrord/next-steps.md"
+        title: "Next Steps II"
+        syntax: "md"
 
 
   # Class 2 - Test: Github integration-2
